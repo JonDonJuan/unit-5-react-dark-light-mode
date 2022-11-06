@@ -3,3 +3,10 @@ main {
   vertical-align: center;
   line-height: 100vh
 }
+
+.time {
+  color: black;
+  font-size: 2em;
+  padding-left: .5em;
+  background-color:rgba(41, 215, 148, 0.622)
+}
