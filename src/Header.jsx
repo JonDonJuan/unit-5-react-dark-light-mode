@@ -2,7 +2,7 @@ import "./App.css";
 
 function Header(props) {
   return (
-    <div style={props.styleMode}>
+    <div style={props.style}>
       {/* // header   */}
 
       <h1>Im a header</h1>
@@ -15,7 +15,5 @@ function Header(props) {
     </div>
   );
 }
-
-<h1></h1>;
 
 export default Header;
