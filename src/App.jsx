@@ -15,27 +15,28 @@ const lightMode = {
   color: "black",
 };
 
-export default function App() {
+function App() {
   //state variable named styleMode with an initial state of lightMode.
   const [styleMode, setStyleMode] = useState("lightMode");
 
+  /* handle button click event : is styleMode equal to lightmode? If so, Set to darkMode. Else set to lightMode */
+
+  const handleClick = () => {
+    styleMode === "lightMode"
+      ? setStyleMode("darkMode")
+      : setStyleMode("lightMode");
+  };
+
   return (
     <div>
-      {/* is styleMode equal to lightmode? If so, Set to darkMode. Else set to lightMode */}
-      <button
-        onClick={() => {
-          styleMode === "lightMode"
-            ? setStyleMode("darkMode")
-            : setStyleMode("lightMode");
-        }}
-      >
-        Toggle Mode
-      </button>
-
-      {/* import components and Pass a styleMode state as a prop to the the child components. */}
+      {/* /button that accepts handleClick */}
+      <button onClick={console.log(handleClick)}>Toggle Theme</button>
+      {/* import components and Pass a styleMode state as a prop to the the child components */}
       <Header header={{ styleMode }} />
       <Content content={{ styleMode }} />
       <Footer footer={{ styleMode }} />
     </div>
   );
 }
+
+export default App;
